@@ -1,0 +1,421 @@
+<html>
+    <head>
+        <title>Explore</title>
+        <link rel="icon" href="picture/ahgabong.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                user-select: none;
+            }
+            body{
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('picture/background.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+            .menu ul {
+                display: inline-flex;
+                margin: 50px;
+            }
+            .menu ul li {
+            list-style: none;
+            margin: 0 20px;
+            color: #cf4f96;
+            cursor: pointer;
+            }
+            .logo img{
+                width: 200px;
+                margin-top: -50;
+                margin-right: 48px;
+            }
+            .marq {
+                width: 100%;
+                direction: right;
+                height: 100px;
+                position: scroll;
+                margin-top: -100px;
+                color: lightgray;
+                font-size: 20px;
+                
+            }
+            .banner {
+                width: 80%;
+                height: 70%;
+                top: 25%;
+                left: 130px;
+                position: absolute;
+                color: rgb(145, 142, 142);
+            }
+            .App-text {
+                width: 50%;
+                float: top;
+            }
+            .App-text h1{
+                margin-top: 300px;
+                margin-left: 245px;
+                font-size: 50px;
+                width: 640px;
+                position: relative;
+                letter-spacing: 5px;
+                text-align: center;
+            }
+            .play-btn {
+                margin-top: -20px;
+                margin-left: 360px;
+                display: inline-flex;
+            }
+            .play-song {
+                height: 58px;
+                width: 304px;
+                position: relative;
+                border: 2px solid transparent;
+                border-radius: 50px;
+                background-image: linear-gradient(#42455a,#42455a), radial-gradient(circle at top left,#fd00da,#19d7f8);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                text-align: center;
+            }
+            .mv-btn {
+                margin-left: 20px;
+                margin-top: -50px;
+                position: absolute;
+                text-decoration: none;
+                color: #fff;
+                border: 2px solid transparent;
+                border-radius: 20px;
+                background-image: linear-gradient(#42455a,#42455a), radial-gradient(circle at top left,#fd00da,#19d7f8);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+            }
+            .mv-btn span {
+                display: block;
+                padding: 8px 22px;
+            }
+            p{
+                color: blanchedalmond;
+                margin-top: 370px;
+                margin-left: 520px;
+            }
+            hr{
+                margin-left: 350px;
+                width: 50%;
+                position: static;
+            }
+            
+            h1 { 
+                font-size: 5vw; 
+            }
+            .linear-wipe {
+            text-align: center;
+            background: linear-gradient(to right, #FFF 20%, #fd00da 40%, #19d7f8 60%, #FFF 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 1s linear infinite;
+            }
+            @keyframes shine {
+                to {
+                background-position: 200% center;
+                }
+            }
+            .orderTable{
+                margin-left: 400px;
+            }
+            .table1 table. tr, td{
+                margin-left: 50px;
+                position: relative;
+            }
+
+            .table2 table{
+                margin-left: 300px;
+                margin-top: -324px;
+            }
+            .pricetag{
+                white-space:nowrap;
+                position:relative;
+                margin:0 5px 0 10px;
+                displaY:inline-block;
+                height:27.8px;
+                border-radius: 0 5px 5px 0;
+                padding: 0 20px 0 15px;
+                background:#030b0f;
+                border: 0 solid #030b0f;
+                border-top-width:1px;
+                border-bottom-width:1px;
+                color:rgb(255, 255, 255);
+                line-height:25px;
+                margin-left: 430px;
+                top: -30px;
+            }
+            .pricetag:after{
+                position:absolute;
+                right:0;
+                margin:1px 8px;
+                font-weight:bold;
+                font-size:19px;
+                content:"\00D7";
+            }
+            .pricetag:before{
+                position:absolute;
+                content:"\25CF";
+                color:white;
+                text-shadow: 0 0 1px #333;
+                font-size:11px;
+                line-height:0px;
+                text-indent:12px;
+                left:-15px;
+                width: 1px;
+                height:0px;
+                border-right:14px solid #030b0f;
+                border-top:  13px solid transparent;
+                border-bottom:  13px solid transparent;
+            }
+            .pricetag2{
+                white-space:nowrap;
+                position:relative;
+                margin:0 5px 0 10px;
+                displaY:inline-block;
+                height:27.8px;
+                border-radius: 0 5px 5px 0;
+                padding: 0 20px 0 15px;
+                background:#030b0f;
+                border: 0 solid #030b0f;
+                border-top-width:1px;
+                border-bottom-width:1px;
+                color:rgb(255, 255, 255);
+                line-height:25px;
+                top: -30px;
+                left: 128px;
+            }
+            .pricetag2:after{
+                position:absolute;
+                right:0;
+                margin:1px 8px;
+                font-weight:bold;
+                font-size:19px;
+                content:"\00D7";
+            }
+            .pricetag2:before{
+                position:absolute;
+                content:"\25CF";
+                color:white;
+                text-shadow: 0 0 1px #333;
+                font-size:11px;
+                line-height:0px;
+                text-indent:12px;
+                left:-15px;
+                width: 1px;
+                height:0px;
+                border-right:14px solid #030b0f;
+                border-top:  13px solid transparent;
+                border-bottom:  13px solid transparent;
+            }
+            .purchase button{
+                top: 1150px;
+                left: 620px;
+                position: absolute;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                border: 2px solid transparent;
+                background-image: linear-gradient(#42455a,#42455a), radial-gradient(circle at top left,#fd00da,#19d7f8);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                background-color: transparent;
+                font-size: 20px;
+            }
+            .form-popup {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+            .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+            }
+            .form-container input[type=text], .form-container input[type=password] {
+                width: 100%;
+                padding: 6px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+            .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            .form-container .btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom:10px;
+                opacity: 0.8;
+            }
+            .form-container .cancel {
+                background-color: red;
+            }
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+        </style>
+
+    </head>
+    <body>
+            <div class="container">
+                <div class="menu">
+                    <ul>
+                        <li class="logo"><img src="picture/aghasae.png"></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="explore.html" class="active">Explore</a></li>
+                    </ul>
+                </div>
+
+                <div class="marq">
+                    <marquee>
+                        Hear and watch GOT7 new comeback.
+                    </marquee>
+                </div>
+
+                <div class="banner">
+                    <div class="App-text">
+                        <h1>BREATH OF LOVE : <br> LAST PIECE</h1><br>
+                    </div>
+                </div>
+
+                <div class="play-btn">
+                    <div class="play-song">
+                        <audio controls>
+                            <source src="picture/audio.mp3" type="audio/mp3">
+                        </audio>
+                        <iframe class="mv-btn" src="picture/video.mp4" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <p>SCROLL TO VIEW AVAILABLE ITEMS
+                <hr></hr><br></br>
+                <h1 class="linear-wipe">PLACE YOUR ORDER <br> NOW !</h1><br>
+                
+                <div class="ordertable">
+                    <div class="table1">
+                        <table id="table" border="1" >
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                    </div>
+                    <div class="table2">
+                        <table id="table2" border="1" >
+                            <tr>
+                                <td>
+                                    <input type="button" value="PURCHASE">
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <script>
+                            var x = document.getElementById("table").rows[0];
+                            x.innerHTML = "<img src='https://lh3.googleusercontent.com/proxy/NQeSE5DzGvLS1xS9FOGbso7FRRKcXV9ASdTR14zusNwzpdeYgg_BXyRkS8HkkTN2zBSoa6vDdr29R1SZbmHrLapWMteDfNpvfsaYLqeWgXwM5Yh7fwGo4y8DznxPmnbdibwgiEMBYZE7ewInew' width='200px' alt='Album'>";
+                            
+                            var x = document.getElementById("table2").rows[0];
+                            x.innerHTML = "<img src='https://media.karousell.com/media/photos/products/2020/12/4/po_got7_breath_of_love_officia_1607057638_ac07eab3_progressive.jpg' width='238px'>";
+                    </script>
+                </div>
+               
+                <span class="pricetag"> ALBUM : RM100</span>
+                <span class="pricetag2"> PHOTOCARD : RM50</span>
+
+                <div class="purchase">
+                    <button onclick="openForm()">PURCHASE</button>
+                    <p></p><br>
+                </div>
+
+                <div class="form-popup" id="myForm">
+                    <form action="/" class="form-container">
+                        <h2>PURCHASE FORM</h2><br>
+                        <b>Choose Items</b><br> 
+                        <input type="radio" id="item" name="buy" onclick="calc()"> Album
+                        <input type="radio" id="item" name="buy" onclick="calc()" > Photocard
+                        <input type="radio" id="both" name="buy" onclick="calcBoth()" > Both<br></br>
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name" name="name" required>
+                        <label for="email"><b>E-mail</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <label for="add"><b>Address</b></label>
+                        <textarea name="add" rows="4" cols="35" placeholder="Enter Address" required></textarea><br></br>
+                        <b id="r">Total Payment : RM</b><br>
+                        <small>*RM4 - postage</small>
+                        <script>
+                            function calc(){
+                                var radio = document.getElementById("item");
+
+                                
+                                if(radio.checked == true){
+                                    var fee = 100;
+                                    var charge = 4;
+                                    var total = fee + charge;
+                                    document.getElementById("r").innerHTML = "Total Payment : RM "  + total;
+                                } 
+                                else{
+                                    var fee = 50;
+                                    var charge = 4;
+                                    var total = fee + charge;
+                                    document.getElementById("r").innerHTML = "Total Payment : RM "  + total;
+                                }
+                            }
+                            function calcBoth(){
+                                var radio = document.getElementById("both");
+
+                                var fee = 100 + 50;
+                                var charge = 4;
+                                var total = fee + charge;
+                                document.getElementById("r").innerHTML = "Total Payment : RM "  + total;
+                            }
+                        </script>
+                        <br></br><b>Payment Method</b><br>
+                        <select required>
+                            <option>Online Banking</option>
+                            <option>Debit Card</option>
+                        </select><br></br>
+                        <input type="checkbox" name="check" required> I accept the Terms & Conditions and Privacy Policy<br></br>
+                        <button type="submit" class="btn" formaction="explore.html" onclick="purchase()">Purchase</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+                  
+                <script>
+                  function openForm() {
+                    document.getElementById("myForm").style.display = "block";
+                  }
+                  
+                  function purchase(){
+                    alert("Your order has been placed. Thank You");
+                  }
+
+                  function closeForm() {
+                    document.getElementById("myForm").style.display = "none";
+                  }
+                </script>
+            </div>
+    </body>
+</html>
